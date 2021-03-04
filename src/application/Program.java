@@ -34,13 +34,19 @@ public class Program {
 			System.out.println(obj);
 		}
 		
-		/*System.out.println("\n === teste 4: Seller Insert ===");
+		System.out.println("\n === teste 4: Seller Insert ===");
 		
 		Seller newSeller = new Seller(null, "Dieferson Weren", "dieferson.weren", new Date(), 900.00, department);
 		sellerDao.insert(newSeller);
 		
-		System.out.println("Iinserido um novo ID: " + newSeller.getId());*/
-
+		System.out.println("Iinserido um novo ID: " + newSeller.getId());
+		
+		System.out.println("\n === teste 5: Seller Update ===");
+		
+		seller = sellerDao.findById(1);
+		seller.setName("Martha Waine");
+		sellerDao.update(seller);
+		System.out.println("Update Completed");
 	}
 
 }
